@@ -1,0 +1,45 @@
+<div class="row">
+    <div class="col-6 col-md-2">
+        <div >
+          
+            <!-- <router-outlet innerHTML="View Posts Here!!!"></router-outlet> -->
+          
+        </div>
+      </div>
+  <div class="col-12 col-md-8">
+    <div *ngFor="let post of posts; let i = index ; trackBy: trackByFn" >
+      <!-- <div class="container "> -->
+      <!-- <div class="col-md-12"> -->
+      <h1>{{post.title}}</h1>
+      <!-- <hr> -->
+      <span class="badge badge-info">Author&ensp;:&ensp;{{post.postedBy}}</span>
+      <p>&nbsp;</p>
+      <p>{{post.desc}}</p>
+      <div>
+          <div class="pull-right">
+                <!-- <span>
+                  <button href="#" [routerLink]="['/view',post._id]" class="btn btn-info btn-xs glyphicon glyphicon-eye-open shadow">&nbsp;View</button>
+                </span> -->
+              </div>
+        <span >
+          <app-like [likes]='post.likes' [ID]='post._id' [index]='i' (addLike)="addLikeFn($event)" (removeLike)="removeLikeFn($event)"></app-like>&ensp;&ensp;
+        </span>
+        <span>
+          <app-comment [comments]='post.comments' [ID]='post._id' [index]='i' (addComment)="postCommentFn($event)"></app-comment>
+        </span>
+        
+      </div>
+      <hr>
+
+    </div>
+    
+
+  </div>
+  <div class="col-6 col-md-2">
+    <div >
+      
+        <!-- <router-outlet innerHTML="View Posts Here!!!"></router-outlet> -->
+      
+    </div>
+  </div>
+</div>

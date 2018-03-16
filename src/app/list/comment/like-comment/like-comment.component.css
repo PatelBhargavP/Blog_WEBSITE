@@ -1,0 +1,46 @@
+.colorRed{
+    color: red;
+    font-size: 17px;
+}
+
+.colorBlack{
+    color:  #5bc0de;
+    font-size: 17px;
+}
+
+.glyphicon-heart{
+    font-size: 20px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+.tooltiptext {
+    /* visibility: hidden;  */
+    /* width: 120px; */
+    min-width: 60px;
+    background-color: #777;;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    padding-left: 10px;
+    padding-right: 5px;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #777 transparent transparent;
+}

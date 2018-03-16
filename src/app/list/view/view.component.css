@@ -1,0 +1,19 @@
+.border{
+    border-left: 1px solid rgb(224, 224, 224);
+    padding-left: 30px;
+}
+.login-page1 {
+    width: 780px;
+    padding: 5% 0 0;
+    margin: auto;
+  }
+.user-details1 {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 750px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }

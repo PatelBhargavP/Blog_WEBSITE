@@ -1,0 +1,27 @@
+<div class="login-page1">
+  <div class="user-details1">
+    <div>
+      <h1>{{thisPost.title}}</h1>
+      <hr>
+      <p>{{thisPost.desc}}</p>
+      <div>
+        <span class="badge pull-left">Author&ensp;:&ensp;{{thisPost.postedBy}}</span>
+        <!-- <span class="badge" *ngFor="let likes of thisPost.likes">{{likes.likedBy}}</span> -->
+        <span >
+            <app-like-comment [likes]='thisPost.like' [ID]='thisPost._id' (addLike)="addLikeFn($event)" (removeLike)="removeLikeFn($event)"></app-like-comment>&ensp;&ensp;
+          </span>
+
+        <button class="btn btn-primary pull-right" (click)="backtolist()">Close</button>
+      </div>
+    </div>
+  </div>
+  <!-- <div class="border" *ngFor="let post of thisPost">
+  <h1>{{post.title}}</h1>
+  <hr>
+  <p>{{post.desc}}</p>
+  <div>
+    <span class="badge">Author&ensp;:&ensp;{{post.postedBy}}</span>
+    <span class="badge" *ngFor="let likes of post.likes">{{likes.likedBy}}</span>
+  
+  <button class="btn btn-primary pull-right" (click)="backtolist()">Close</button>
+  </div> -->

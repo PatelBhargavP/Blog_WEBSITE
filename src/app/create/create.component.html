@@ -1,0 +1,36 @@
+<!-- <div class="row">
+    <div class="col-md-offset-2 col-md-10"> -->
+      <div class="login-page1">
+        <div class="user-details1">
+          <!-- Create Post
+        </div>
+        <div class="panel-body"> -->
+          <form class="form">
+            <div class="form-group">
+              <label class="pull-left"class="pull-left">Title</label>
+              <input type="text" class="form-control" [(ngModel)]="post.title" name="title" />
+            </div>
+            <div class="form-group">
+              <label class="pull-left">Desscription</label>
+              <textarea rows="5" class="form-control" [(ngModel)]="post.desc" name="desc" ></textarea>
+            </div>
+
+            <hr>
+            
+            <div class="row form-group">
+                <div class="col-md-offset-3 col-md-6">
+                    <button class="btn btn-info btn-block btn-sm shadow" (click)="createPost()">Post</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <!-- <span>Already Registered?</span>
+                <span>&ensp;|&ensp;</span> -->
+                <span>
+                  <a [routerLink]='["/list"]'>View all Posts</a>
+                </span>
+            </div>
+          </form>
+        </div>
+      </div>
+    <!-- </div>
+  </div> -->

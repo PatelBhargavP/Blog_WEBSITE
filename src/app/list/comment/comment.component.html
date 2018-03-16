@@ -1,0 +1,30 @@
+<button class="btn btn-info btn-xs glyphicon glyphicon-comment shadow" (click)="showComment()">
+        <span>{{noOfComment}}</span>
+</button>
+<div [style.display]="styleValue">
+<h3 class="comments-title">
+        <span class="bagde"></span>
+        Comments
+</h3>
+<ul class="media-list comment-detail-list" >
+        <li class="media" *ngFor="let comment of comments">
+                <article>
+                        <div class="pull-left comment-info">
+                                <strong class="badge">{{comment.commentBy}}&nbsp;Says:&nbsp;</strong>
+                                <br>
+                        </div>
+                        <div class="media-body">
+                                <div class="comment-body">
+                                        <p>{{comment.text}}</p>
+                                </div>
+                        </div>
+                </article>
+        </li>
+        <div class="input-group shadow">
+                <input type="text" class="form-control" [(ngModel)]=thisComment.comment #ctrl="ngModel" required>
+                <span class="input-group-btn">
+                        <button class="btn btn-default" type="submit" (click)="postComment()">Post Comment</button>
+                </span>
+        </div>
+</ul>
+</div>

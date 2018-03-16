@@ -1,0 +1,7 @@
+<span [ngClass]="currentClass" (click)="likeFn()">&#10084;</span>
+<a class="badge " (mouseenter)="mouseEnter() " (mouseleave)="mouseLeave()">{{noOfLikes}}</a>
+<span class="tooltiptext shadow" [style.visibility]="styleValue">
+    <strong>Liked By</strong>
+    <br>
+    <span *ngFor="let like of likes">{{like.likedBy}},&nbsp;</span>
+</span>

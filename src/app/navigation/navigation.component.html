@@ -1,0 +1,35 @@
+<div class="navbar navbar-inverse bg-info">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a href="#" class="navbar-brand">My Blog Website</a>
+    </div>
+    <div class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+
+        <li>
+          <a [routerLink]='["/home"]' *ngIf="logInStat">Home</a>
+        </li>
+        <li>
+          <a [routerLink]='["/create"]' *ngIf="logInStat">Create Post</a>
+        </li>
+        <li>
+          <a [routerLink]='["/list"]' *ngIf="logInStat">List Post</a>
+        </li>
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li *ngIf="!logInStat">
+          <a [routerLink]='["/login"]'>Login</a>
+        </li>
+        <li *ngIf="!logInStat">
+          <a [routerLink]='["/register"]' >Regster</a>
+        </li>
+        <li *ngIf="logInStat">
+          <a (click)="logout()">Logout</a>
+        </li>
+
+      </ul>
+    </div>
+
+  </div>
+</div>

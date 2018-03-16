@@ -1,0 +1,11 @@
+<!-- <button class="btn btn-info btn-xs glyphicon glyphicon-thumbs-up" 
+        (click)="likeFn()" data-toggle="modal" data-target="#myModal">
+        <span>{{noOfLikes}}</span>
+</button> -->
+<span [ngClass]="currentClass" (click)="likeFn()">&#10084;</span>
+<a class="badge shadow" (mouseenter)="mouseEnter() " (mouseleave)="mouseLeave()">{{noOfLikes}}</a>
+<span class="tooltiptext shadow" [style.visibility]="styleValue">
+    <strong>Liked By</strong>
+    <br>
+    <span *ngFor="let like of likes">{{like.likedBy}},&nbsp;</span>
+</span>
